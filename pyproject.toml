@@ -2,7 +2,7 @@
 name = "pipeline-test"
 version = "0.9.1"
 description = "pipeline-test"
-authors = "morpheus65535"
+authors = ["morpheus65535"]
 
 [tool.semantic_release]
 version_variable = [
