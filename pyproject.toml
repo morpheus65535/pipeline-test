@@ -4,6 +4,9 @@ version = "0.9.1"
 description = "pipeline-test"
 authors = ["morpheus65535"]
 
+[tool.poetry.dependencies]
+python = "^3.8"
+
 [tool.semantic_release]
 version_variable = [
     "src/__init__.py:__version__",
