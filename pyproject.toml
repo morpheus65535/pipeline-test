@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "pipeline-test"
 version = "0.9.1"
+description = "pipeline-test"
 
 [tool.semantic_release]
 version_variable = [
