@@ -3,13 +3,16 @@ name = "pipeline-test"
 version = "0.9.10"
 description = "pipeline-test"
 authors = ["morpheus65535"]
+packages = [
+    { include = "pipeline-test", from = "src" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 
 [tool.semantic_release]
 version_variable = [
-    "pipeline-test/__init__.py:__version__",
+    "src/__init__.py:__version__",
     "pyproject.toml:version"
 ]
 branch = "master"
