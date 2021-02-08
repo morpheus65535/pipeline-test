@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.5 (2021-02-08)
+### Fix
+* Python version ([`2ae6534`](https://github.com/morpheus65535/pipeline-test/commit/2ae6534e546aa556db87caadab028fb0e9a84280))
+
 ## v0.9.4 (2021-02-08)
 ### Fix
 * Indent error ([`31a189b`](https://github.com/morpheus65535/pipeline-test/commit/31a189b5bec8376acb09a6a1ca52720ee7395714))
