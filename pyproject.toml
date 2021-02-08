@@ -5,7 +5,7 @@ description = "pipeline-test"
 authors = ["morpheus65535"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 
 [tool.semantic_release]
 version_variable = [
