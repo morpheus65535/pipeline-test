@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.4 (2021-02-08)
+### Fix
+* Indent error ([`31a189b`](https://github.com/morpheus65535/pipeline-test/commit/31a189b5bec8376acb09a6a1ca52720ee7395714))
+* Change to create release ([`4df5deb`](https://github.com/morpheus65535/pipeline-test/commit/4df5deb9756de8c68b729d8509952bfd70baff6a))
+
 ## v0.9.3 (2021-02-08)
 ### Fix
 * Print version ([`3bbcf49`](https://github.com/morpheus65535/pipeline-test/commit/3bbcf4932eb499102538f45f051b36652d123e80))
