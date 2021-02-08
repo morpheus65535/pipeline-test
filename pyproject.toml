@@ -9,7 +9,7 @@ python = "^3.8"
 
 [tool.semantic_release]
 version_variable = [
-    "src/__init__.py:__version__",
+    "pipeline-test/__init__.py:__version__",
     "pyproject.toml:version"
 ]
 branch = "master"
