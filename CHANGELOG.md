@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.8 (2021-02-08)
+### Fix
+* Wip2 ([`1822af8`](https://github.com/morpheus65535/pipeline-test/commit/1822af8bd493b02ac09b3e940066f2ba348b1368))
+
 ## v0.9.7 (2021-02-08)
 ### Fix
 * Wip ([`bb32785`](https://github.com/morpheus65535/pipeline-test/commit/bb32785bea13fa3c5d1f8abc70c0c324d95739d7))
