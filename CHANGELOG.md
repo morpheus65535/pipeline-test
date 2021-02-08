@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.6 (2021-02-08)
+### Fix
+* Wip ([`878aaba`](https://github.com/morpheus65535/pipeline-test/commit/878aabaab63c469f5e7af7c900bb7a9b1382e939))
+
 ## v0.9.5 (2021-02-08)
 ### Fix
 * Python version ([`2ae6534`](https://github.com/morpheus65535/pipeline-test/commit/2ae6534e546aa556db87caadab028fb0e9a84280))
