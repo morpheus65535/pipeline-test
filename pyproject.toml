@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pipeline-test"
-version = "0.9.12"
+version = "0.9.13"
 description = "pipeline-test"
 authors = ["morpheus65535"]
 packages = [
