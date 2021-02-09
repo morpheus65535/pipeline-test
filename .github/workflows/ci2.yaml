@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/setup-node@v2
       - run: npm install
-      - run: npm install release-it
-      - run: npm install @release-it/bumper
+      - run: npm install -D release-it
+      - run: npm install -D @release-it/bumper
 
       - name: Checkout
         uses: actions/checkout@v2
