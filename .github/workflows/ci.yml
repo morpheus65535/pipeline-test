@@ -4,9 +4,9 @@
 name: CI
 on:
   push:
-    branches: [ development ]
+    branches: [ master ]
   pull_request:
-    branches: [ development ]
+    branches: [ master ]
 
 jobs:
   Quality:
@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: development
+        ref: master
     - uses: actions/setup-python@v2
       with:
         python-version: 3.8
@@ -46,16 +46,6 @@ jobs:
     needs: Quality
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: development
-          fetch-depth: 0
-
-      - name: Python Semantic Release
-        uses: relekang/python-semantic-release@master
-        with:
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
-
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
