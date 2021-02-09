@@ -8,6 +8,8 @@ on:
 jobs:
   Release:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/setup-node@v2
       - run: npm install
