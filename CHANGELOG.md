@@ -2,6 +2,19 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.14 (2021-02-09)
+### Fix
+* Wip24 ([`b859419`](https://github.com/morpheus65535/pipeline-test/commit/b85941995520ccfc8b154ef7cb9a158a9156a01f))
+* Wip23 ([`b4f5462`](https://github.com/morpheus65535/pipeline-test/commit/b4f5462ad81c540fb6fa2d2cfcac70ae6e89c434))
+* Wip22 ([`01f32ef`](https://github.com/morpheus65535/pipeline-test/commit/01f32ef80e87175830794583201f381f7cffe538))
+* Wip22 ([`fbfbd51`](https://github.com/morpheus65535/pipeline-test/commit/fbfbd5140f04ecfe174555099bc0bde934da7a4b))
+* Wip21 ([`0828f82`](https://github.com/morpheus65535/pipeline-test/commit/0828f82fda3c0e6596e3730f8142aaa91a7511ca))
+* Wip18 ([`a949f61`](https://github.com/morpheus65535/pipeline-test/commit/a949f61ca1923bba48fff81a8df8f6a5b14ff3f2))
+* Wip16 ([`86b861a`](https://github.com/morpheus65535/pipeline-test/commit/86b861aceb9f114a46f8ee8ca51c963a9dd662a0))
+* Wip13 ([`0a4f5d1`](https://github.com/morpheus65535/pipeline-test/commit/0a4f5d131286c7d9124e7287a294fe5235123bda))
+* Wip11 ([`1290daa`](https://github.com/morpheus65535/pipeline-test/commit/1290daa4e5930c0673db7c2d8ee3a285199fdb5f))
+* Wip10 ([`28b9f34`](https://github.com/morpheus65535/pipeline-test/commit/28b9f34e84c99500e555e076efd00b5613581315))
+
 ## v0.9.13 (2021-02-09)
 ### Fix
 * Wip9 ([`6844fa9`](https://github.com/morpheus65535/pipeline-test/commit/6844fa926404190ee897e6a45eadc516940b4d56))
