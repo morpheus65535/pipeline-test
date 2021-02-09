@@ -25,4 +25,4 @@ jobs:
       - run: npm install -D @release-it/bumper
 
       - run: npm init release-it
-      - run: npm run release
+      - run: npm run release-it
