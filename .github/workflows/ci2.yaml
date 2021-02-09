@@ -23,6 +23,6 @@ jobs:
       - run: npm install
       - run: npm install -D release-it
       - run: npm install -D @release-it/bumper
-
-      - run: npm init release-it
-      - run: npm run release-it
+      
+      - name: release-it
+        uses: TheRealWaldo/release-it@v0.2.1
