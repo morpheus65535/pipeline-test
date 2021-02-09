@@ -1,9 +1,0 @@
-{
-  "name": "pipeline-test",
-  "version": "0.9.15",
-  "description": "",
-  "dependencies": {
-    "release-it": "14.3.0",
-    "release-it/bumper": "2.0.0"
-  }
-}
