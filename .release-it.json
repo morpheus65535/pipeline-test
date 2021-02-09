@@ -9,12 +9,10 @@
   "plugins": {
     "@release-it/bumper": {
       "in": {
-        "file": "src/__init__.py",
-        "type": "text/x-python"
+        "file": "VERSION"
       },
       "out": {
-        "file": "src/__init__.py",
-        "type": "text/x-python"
+        "file": "VERSION"
       }
     }
   }
