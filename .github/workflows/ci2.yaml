@@ -6,13 +6,13 @@ on:
     branches: [ master ]
 
 jobs:
-  Quality:
+  Release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2
       - run: npm install
-      - run: npm install -D release-it
-      - run: npm install -D @release-it/bumper
+      - run: npm install release-it --no-save
+      - run: npm install @release-it/bumper --no-save
 
       - name: Checkout
         uses: actions/checkout@v2

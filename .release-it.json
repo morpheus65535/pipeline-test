@@ -1,6 +1,7 @@
 {
   "github": {
-    "preRelease": true
+    "preRelease": true,
+    "tokenRef": "${{ secrets.GITHUB_TOKEN }}"
   },
   "plugins": {
     "@release-it/bumper": {
