@@ -1,0 +1,17 @@
+{
+  "github": {
+    "preRelease": true
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "in": {
+        "file": "src/__init__.py",
+        "type": "text/x-python"
+      },
+      "out": {
+        "file": "src/__init__.py",
+        "type": "text/x-python"
+      }
+    }
+  }
+}
