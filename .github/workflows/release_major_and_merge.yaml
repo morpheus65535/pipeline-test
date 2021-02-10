@@ -1,4 +1,4 @@
-name: increase_version_patch_number
+name: release_major_and_merge
 on:
   workflow_dispatch
 
@@ -31,7 +31,7 @@ jobs:
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"increment": "minor"}'
+          json-opts: '{"increment": "major"}'
   Merge:
     needs: Release
     runs-on: ubuntu-latest

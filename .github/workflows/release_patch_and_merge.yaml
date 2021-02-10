@@ -1,4 +1,4 @@
-name: increase_version_patch_number
+name: release_patch_and_merge
 on:
   workflow_dispatch
 
