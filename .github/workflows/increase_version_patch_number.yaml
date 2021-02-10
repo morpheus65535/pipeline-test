@@ -10,7 +10,7 @@ jobs:
       GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
     steps:
       - name: Validate branch
-        if: ${{ github.ref != 'ref/head/development' }}
+        if: ${{ github.ref != 'refs/heads/development' }}
         run: |
           echo This action can be run only on development branch, not ${{ github.ref }}
           exit 1
