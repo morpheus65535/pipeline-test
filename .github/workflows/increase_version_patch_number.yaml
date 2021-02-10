@@ -11,8 +11,9 @@ jobs:
     steps:
       - name: Validate branch
         if: {{ github.ref != 'ref/head/development' }}
-        run: echo This action can be run only on development branch
-        run: exit 1
+        run: |
+          echo This action can be run only on development branch
+          exit 1
       
       - name: Checkout source code
         uses: actions/checkout@v2
