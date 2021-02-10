@@ -1,4 +1,4 @@
-name: increase_version_on_dev_push_or_pr
+name: release_beta_to_dev
 on:
   push:
     branches: [ development ]
