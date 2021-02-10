@@ -23,9 +23,8 @@ jobs:
           node-version: '15.x'
       - run: npm install -D release-it
       - run: npm install -D @release-it/bumper
-      - run: npm install -D @release-it/conventional-changelog
       
       - name: Release-it
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"prepatch": true}'
+          json-opts: '{"increment": "prepatch", "preReleaseId": "beta"}'
