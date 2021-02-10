@@ -38,13 +38,11 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: development
 
       - name: Merge development -> master
         uses: devmasx/merge-branch@v1.3.1
         with:
           type: now
+          from_branch: development
           target_branch: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
