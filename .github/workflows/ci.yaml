@@ -20,9 +20,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '15.x'
-      - run: npm install
       - run: npm install -D release-it
       - run: npm install -D @release-it/bumper
+      - run: npm install -D @release-it/conventional-changelog
       
       - name: release-it
         uses: TheRealWaldo/release-it@v0.2.1

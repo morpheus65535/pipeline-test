@@ -1,7 +1,8 @@
 {
   "github": {
   	"release": true,
-    "preRelease": true
+    "preRelease": true,
+    "preReleaseId": "beta"
   },
   "npm": {
     "publish": false,
@@ -15,6 +16,9 @@
       "out": {
         "file": "VERSION"
       }
+    },
+    "@release-it/conventional-changelog": {
+      "preset": "angular"
     }
   }
 }
