@@ -12,7 +12,7 @@ jobs:
       - name: Validate branch
         if: ${{ github.ref != 'ref/head/development' }}
         run: |
-          echo This action can be run only on development branch
+          echo This action can be run only on development branch, not ${{ github.ref }}
           exit 1
       
       - name: Checkout source code
