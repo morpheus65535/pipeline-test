@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Validate branch
         if: {{ github.ref != 'ref/head/development' }}
-        run: echo This should be run only on development branch
+        run: echo This action can be run only on development branch
         run: exit 1
       
-      - name: Checkout
+      - name: Checkout source code
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -27,7 +27,22 @@ jobs:
       - run: npm install -D release-it
       - run: npm install -D @release-it/bumper
       
-      - name: Release-it
+      - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
           json-opts: '{"increment": "patch"}'
+  Merge:
+    needs: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        with:
+          ref: development
+
+      - name: Merge development -> master
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          target_branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
