@@ -39,6 +39,7 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           ref: development
 
       - name: Merge development -> master
