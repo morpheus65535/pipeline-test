@@ -2,7 +2,7 @@
   "github": {
   	"release": true,
     "preRelease": true,
-    "releaseName": "v${version}",
+    "releaseName": "v ${version}",
   },
   "npm": {
     "publish": false,
