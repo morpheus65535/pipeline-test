@@ -1,9 +1,6 @@
-name: CI
+name: CI_increase_version_patch_number
 on:
-  push:
-    branches: [ development ]
-  pull_request:
-    branches: [ development ]
+  workflow_dispatch
 
 jobs:
   Release:
@@ -28,4 +25,4 @@ jobs:
       - name: Release-it
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"increment": "prepatch", "preReleaseId": "beta"}'
+          json-opts: '{"increment": "patch"}'
