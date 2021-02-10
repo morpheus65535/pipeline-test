@@ -1,9 +1,7 @@
 {
   "github": {
   	"release": true,
-    "preRelease": true,
-    "prepatch": true,
-    "preReleaseId": "beta"
+    "preRelease": true
   },
   "npm": {
     "publish": false,

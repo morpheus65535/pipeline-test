@@ -17,12 +17,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
         with:
           node-version: '15.x'
       - run: npm install -D release-it
       - run: npm install -D @release-it/bumper
       - run: npm install -D @release-it/conventional-changelog
       
-      - name: release-it
+      - name: Release-it
         uses: TheRealWaldo/release-it@v0.2.1
+        with:
+          json-opts: '{"prepatch": true}'
