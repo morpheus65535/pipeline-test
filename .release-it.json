@@ -1,13 +1,20 @@
 {
-  "hooks": {
-    "after:bump": "echo ${version} > $(git rev-parse --show-toplevel)/VERSION"
-  },
   "github": {
-    "release": true,
+  	"release": true,
     "releaseName": "v${version}"
   },
   "npm": {
     "publish": false,
     "ignoreVersion": true
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "in": {
+        "file": "VERSION"
+      },
+      "out": {
+        "file": "VERSION"
+      }
+    }
   }
 }
