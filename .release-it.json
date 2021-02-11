@@ -1,4 +1,8 @@
 {
+  "hooks": {},
+  "git": {
+    "push": false
+  },
   "github": {
   	"release": true,
     "releaseName": "v${version}",
@@ -10,9 +14,6 @@
   },
   "plugins": {
     "@release-it/bumper": {
-      "in": {
-        "file": "VERSION"
-      },
       "out": {
         "file": "VERSION"
       }
