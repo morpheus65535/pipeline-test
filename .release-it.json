@@ -1,5 +1,7 @@
 {
-  "hooks": {},
+  "hooks": {
+    "after:bump": "echo ${version} > release_info"
+  },
   "git": {
     "commit": false,
     "push": false
@@ -11,12 +13,5 @@
   "npm": {
     "publish": false,
     "ignoreVersion": true
-  },
-  "plugins": {
-    "@release-it/bumper": {
-      "out": {
-        "file": "VERSION"
-      }
-    }
   }
 }
