@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "after:bump": "echo ${version} > release_info"
+    "after:bump": "echo pwd"
   },
   "git": {
     "commit": false,
