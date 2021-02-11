@@ -1,6 +1,7 @@
 {
   "hooks": {},
   "git": {
+    "commit": false,
     "push": false
   },
   "github": {
