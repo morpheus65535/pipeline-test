@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "after:bump": "echo pwd"
+    "after:bump": "echo module.exports = {version: \"'\"${version}\"'\"} > $(git rev-parse --show-toplevel)/VERSION"
   },
   "git": {
     "commit": false,
