@@ -2,9 +2,6 @@
   "hooks": {
     "after:bump": "echo ${version} > $(git rev-parse --show-toplevel)/VERSION"
   },
-  "git": {
-    "addUntrackedFiles": true
-  },
   "github": {
     "release": true,
     "releaseName": "v${version}"
