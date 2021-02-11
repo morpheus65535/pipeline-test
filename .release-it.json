@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "after:bump": "echo module.exports = {version: \"'\"${version}\"'\"} > $(git rev-parse --show-toplevel)/VERSION"
+    "after:bump": "echo ${version} > $(git rev-parse --show-toplevel)/VERSION"
   },
   "github": {
   	"release": true,
