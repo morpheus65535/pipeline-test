@@ -27,11 +27,18 @@ jobs:
           node-version: '15.x'
       - run: npm install -D release-it
       - run: npm install -D @release-it/bumper
+      - run: npm install -D auto-changelog
+      
+      - id: latest_release
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: ${{ github.repository }}
+          excludes: prerelease, draft
       
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"increment": "patch"}'
+          json-opts: '{"increment": "patch", "releaseNotes": "auto-changelog --starting-version {{ steps.latest_release.outputs.release }} --hide-credit --release-summary --stdout --ignore-commit-pattern=\'Release \' --sort-commits=date-desc --template changelog.hbs"}'
   Merge:
     needs: Release
     runs-on: ubuntu-latest
