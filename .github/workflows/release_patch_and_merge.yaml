@@ -35,10 +35,17 @@ jobs:
           repository: ${{ github.repository }}
           excludes: prerelease, draft
       
+      - id: strip_v
+        uses: mad9000/actions-find-and-replace-string@2
+        with:
+            source: ${{ steps.latest_release.outputs.release }}
+            find: 'v'
+            replace: ''
+
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"increment": "patch", "github.releaseNotes": "auto-changelog --starting-version "${{ steps.latest_release.outputs.release }}" --hide-credit --release-summary --stdout --ignore-commit-pattern="Release " --sort-commits=date-desc --template changelog.hbs"}'
+          json-opts: '{"increment": "patch", "github.releaseNotes": "auto-changelog --starting-version "${{ steps.strip_v.outputs.release }}" --hide-credit --release-summary --stdout --ignore-commit-pattern="Release " --sort-commits=date-desc --template changelog.hbs"}'
   Merge:
     needs: Release
     runs-on: ubuntu-latest
