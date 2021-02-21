@@ -34,6 +34,9 @@ jobs:
         with:
           repository: ${{ github.repository }}
           excludes: prerelease, draft
+
+      - test
+        run: "npx auto-changelog --starting-version ${{steps.latest_release.outputs.release}} --hide-credit --release-summary --stdout --ignore-commit-pattern=\"Release|Merge\" --sort-commits=date-desc --template $GITHUB_WORKSPACE/changelog.hbs"
       
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
