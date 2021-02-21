@@ -8,7 +8,8 @@
   },
   "github": {
   	"release": true,
-    "releaseName": "v${version}"
+    "releaseName": "v${version}",
+    "releaseNotes": "npx auto-changelog --stdout --hide-credit --unreleased --commit-limit false --sort-commits=date-desc --ignore-commit-pattern=\"Release\\s|Merge\\s\" --starting-version $last_version --template $GITHUB_WORKSPACE/changelog.hbs"
   },
   "npm": {
     "publish": false,

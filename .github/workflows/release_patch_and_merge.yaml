@@ -35,10 +35,14 @@ jobs:
           repository: ${{ github.repository }}
           excludes: prerelease, draft
 
+      - name: Define last version environment variable
+        run: |
+            echo "last_version=${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
+      
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"increment": "patch", "git.changelog": "npx auto-changelog --starting-version ${{steps.latest_release.outputs.release}} --hide-credit --release-summary --stdout --sort-commits=date-desc --template $GITHUB_WORKSPACE/changelog.hbs"}'
+          json-opts: '{"increment": "patch"}'
   Merge:
     needs: Release
     runs-on: ubuntu-latest

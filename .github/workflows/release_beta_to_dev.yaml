@@ -23,6 +23,17 @@ jobs:
         with:
           node-version: '15.x'
       - run: npm install -D release-it
+      - run: npm install -D @release-it/bumper
+      - run: npm install -D auto-changelog
+      
+      - id: latest_release
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: ${{ github.repository }}
+
+      - name: Define last version environment variable
+        run: |
+            echo "last_version=${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
       
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
