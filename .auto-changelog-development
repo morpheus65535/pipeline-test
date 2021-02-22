@@ -1,0 +1,8 @@
+{
+	"stdout": true,
+	"hide-credit": true,
+	"unreleased": true,
+	"sort-commits": "date-desc",
+	"ignore-commit-pattern": "Release\\s|Merge\s",
+	"template": $GITHUB_WORKSPACE/changelog.hbs
+}
