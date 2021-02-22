@@ -4,5 +4,5 @@
 	"unreleased": true,
 	"sort-commits": "date-desc",
 	"ignore-commit-pattern": "^Release|^Merge",
-	"template": changelog.hbs
+	"template": "$GITHUB_WORKSPACE/changelog.hbs"
 }
