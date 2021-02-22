@@ -32,9 +32,9 @@ jobs:
           repository: ${{ github.repository }}
           excludes: draft
 
-      - name: Define last version and unreleased-only environment variables
+      - name: Define last_version and unreleased-only environment variables
         run: |
-            echo "last_version=${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
+            echo "last_version=" >> $GITHUB_ENV
             echo "unreleased-only=--unreleased-only" >> $GITHUB_ENV
       
       - name: Update version and create release

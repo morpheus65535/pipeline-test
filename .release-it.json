@@ -2,7 +2,7 @@
   "github": {
   	"release": true,
     "releaseName": "v${version}",
-    "releaseNotes": "npx auto-changelog --stdout --hide-credit --unreleased --sort-commits=date-desc --ignore-commit-pattern=\"Release\\s|Merge\\s\" --starting-version $last_version --template $GITHUB_WORKSPACE/changelog.hbs $unreleased-only"
+    "releaseNotes": "npx auto-changelog --stdout --hide-credit --unreleased --sort-commits=date-desc --ignore-commit-pattern=\"Release\\s|Merge\\s\" --template $GITHUB_WORKSPACE/changelog.hbs $last_version $unreleased-only"
   },
   "npm": {
     "publish": false,
