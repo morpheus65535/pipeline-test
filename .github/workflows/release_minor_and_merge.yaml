@@ -35,14 +35,15 @@ jobs:
           repository: ${{ github.repository }}
           excludes: prerelease, draft
 
-      - name: Define last version environment variable
+      - name: Define LST_VERSION and DEST_BRANCH environment variables
         run: |
-            echo "last_version=--starting-version ${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
+            echo "LAST_VERSION=--starting-version ${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
+            echo "DEST_BRANCH=master" >> $GITHUB_ENV
       
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"increment": "minor", "git.changelog": "npx auto-changelog --config .auto-changelog-master"}'
+          json-opts: '{"increment": "minor"}'
   Merge:
     needs: Release
     runs-on: ubuntu-latest

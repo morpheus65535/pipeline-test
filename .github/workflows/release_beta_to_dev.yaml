@@ -26,7 +26,11 @@ jobs:
       - run: npm install -D @release-it/bumper
       - run: npm install -D auto-changelog
       
+      - name: Define DEST_BRANCH environment variable
+        run: |
+            echo "DEST_BRANCH=development" >> $GITHUB_ENV
+      
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"preRelease": true, "increment": "prepatch", "preReleaseId": "beta", "git.changelog": "npx auto-changelog --config .auto-changelog-development"}'
+          json-opts: '{"preRelease": true, "increment": "prepatch", "preReleaseId": "beta"}'
