@@ -35,4 +35,4 @@ jobs:
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"preRelease": true, "increment": "prepatch", "preReleaseId": "beta", "releaseNotes": "npx auto-changelog --config .auto-changelog-development"}'
+          json-opts: '{"preRelease": true, "increment": "prepatch", "preReleaseId": "beta", "releaseNotes": "npx auto-changelog --config $GITHUB_WORKSPACE/.auto-changelog-development"}'
