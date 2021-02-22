@@ -1,6 +1,6 @@
 From newest to oldest:
 {{#each releases}}
   {{#each commits}}
-    - {{subject}}
+    - {{subject}}{{#if href}} [`{{shorthash}}`]({{href}}){{/if}}
   {{/each}}
 {{/each}}
