@@ -35,10 +35,9 @@ jobs:
           repository: ${{ github.repository }}
           excludes: prerelease, draft
 
-      - name: Define last_version and unreleased-only environment variables
+      - name: Define last version environment variable
         run: |
             echo "last_version=--starting-version ${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
-            echo "unreleased-only=" >> $GITHUB_ENV
       
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
