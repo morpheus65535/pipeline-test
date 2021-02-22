@@ -7,5 +7,15 @@
   "npm": {
     "publish": false,
     "ignoreVersion": true
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "in": {
+        "file": "VERSION"
+      },
+      "out": {
+        "file": "VERSION"
+      }
+    }
   }
 }
