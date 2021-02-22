@@ -26,13 +26,7 @@ jobs:
       - run: npm install -D @release-it/bumper
       - run: npm install -D auto-changelog
       
-      - id: latest_release
-        uses: pozetroninc/github-action-get-latest-release@master
-        with:
-          repository: ${{ github.repository }}
-          excludes: draft
-
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"preRelease": true, "increment": "prepatch", "preReleaseId": "beta", "releaseNotes": "npx auto-changelog --config $GITHUB_WORKSPACE/.auto-changelog-development"}'
+          json-opts: '{"preRelease": true, "increment": "prepatch", "preReleaseId": "beta", "github.releaseNotes": "npx auto-changelog --config $GITHUB_WORKSPACE/.auto-changelog-development"}'
