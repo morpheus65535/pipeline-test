@@ -42,7 +42,7 @@ jobs:
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1
         with:
-          json-opts: '{"increment": "patch", "releaseNotes": "npx auto-changelog --config .auto-changelog-master"}'
+          json-opts: '{"increment": "patch", "git.changelog": "npx auto-changelog --config .auto-changelog-master"}'
   Merge:
     needs: Release
     runs-on: ubuntu-latest
