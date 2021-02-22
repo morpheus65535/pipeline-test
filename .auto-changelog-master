@@ -4,6 +4,6 @@
 	"unreleased": true,
 	"sort-commits": "date-desc",
 	"ignore-commit-pattern": "Release\\s|Merge\s",
-	"starting-version": $last_version,
+	"starting-version": $LAST_VERSION,
 	"template": $GITHUB_WORKSPACE/changelog.hbs
 }
