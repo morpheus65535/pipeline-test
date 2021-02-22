@@ -30,6 +30,7 @@ jobs:
         uses: pozetroninc/github-action-get-latest-release@master
         with:
           repository: ${{ github.repository }}
+          excludes: draft
 
       - name: Define last version environment variable
         run: |
