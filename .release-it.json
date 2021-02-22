@@ -2,7 +2,7 @@
   "github": {
   	"release": true,
     "releaseName": "v${version}",
-    "releaseNotes": "npx auto-changelog --config .auto-changelog-$DEST_BRANCH"
+    "releaseNotes": "npx auto-changelog --config $GITHUB_WORKSPACE/.auto-changelog-$DEST_BRANCH"
   },
   "npm": {
     "publish": false,
