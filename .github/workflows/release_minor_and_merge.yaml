@@ -35,10 +35,9 @@ jobs:
           repository: ${{ github.repository }}
           excludes: prerelease, draft
 
-      - name: Define LST_VERSION and DEST_BRANCH environment variables
+      - name: Define LAST_VERSION environment variable
         run: |
-            echo "LAST_VERSION=--starting-version ${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
-            echo "DEST_BRANCH=master" >> $GITHUB_ENV
+            echo "LAST_VERSION=${{steps.latest_release.outputs.release}}" >> $GITHUB_ENV
       
       - name: Update version and create release
         uses: TheRealWaldo/release-it@v0.2.1

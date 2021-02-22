@@ -2,7 +2,7 @@
   "github": {
   	"release": true,
     "releaseName": "v${version}",
-    "releaseNotes": "npx auto-changelog --config $GITHUB_WORKSPACE/.auto-changelog-$DEST_BRANCH"
+    "releaseNotes": "echo \"From newest to oldest:\" && git log --pretty=format:\"- %s [%h](${repo.protocol}://${repo.host}/${repo.owner}/${repo.project}/commit/%H)\" --no-merges --grep \"^Release\" --invert-grep $LAST_VERSION..HEAD"
   },
   "npm": {
     "publish": false,
