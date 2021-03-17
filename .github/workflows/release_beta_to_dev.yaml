@@ -44,6 +44,11 @@ jobs:
         run: npm run build
         working-directory: ${{ env.working-directory }}
 
+      - name: Remove generated node_modules directory
+        uses: JesseTG/rm@v1.0.2
+        with:
+          path: ${{ env.working-directory }}/node_modules
+
       - id: latest_release
         uses: pozetroninc/github-action-get-latest-release@master
         with:
