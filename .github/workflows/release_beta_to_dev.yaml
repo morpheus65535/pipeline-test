@@ -24,7 +24,15 @@ jobs:
           node-version: '15.x'
       - run: npm install -D release-it
       - run: npm install -D @release-it/bumper
-      
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ${{ env.working-directory }}
+
+      - name: Build
+        run: npm run build
+        working-directory: ${{ env.working-directory }}
+
       - id: latest_release
         uses: pozetroninc/github-action-get-latest-release@master
         with:
