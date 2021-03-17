@@ -11,6 +11,7 @@ jobs:
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      working-directory: ./frontend
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
@@ -28,7 +29,7 @@ jobs:
       - name: Remove previous node_modules directory
         uses: JesseTG/rm@v1.0.2
         with:
-          path: ./frontend/node_modules
+          path: ${{ env.working-directory }}/node_modules
 
       - name: Install dependencies
         run: npm install
@@ -37,7 +38,7 @@ jobs:
       - name: Remove previous build directory
         uses: JesseTG/rm@v1.0.2
         with:
-          path: ./frontend/build
+          path: ${{ env.working-directory }}/build
 
       - name: Build
         run: npm run build
